@@ -1,7 +1,7 @@
 // Init TD JS SDK
 var td = new Treasure({
   database: 'database',
-  writeKey: 'xxxxxxxxxxxxxx',
+  writeKey: 'xxxxxxxxxxxxxxxxx',
   host: 'in.treasuredata.com',
   useServerSideCookie: false,
   startInSignedMode: false
