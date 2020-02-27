@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  test_server:
+    container_name: 'testserver'
+    image: imnutz/jssdk-test
+    ports:
+      - 3000:3000
+  testcafe_1:
+    image: testcafe/testcafe
+    volumes:
+      - ./tests:/tests
+    environment:
+      - TEST_SERVER=test_server
+    command: ["-c", "2" ,"'chromium --headless --no-sandbox --disable-extensions --allow-insecure-localhost --allow-running-insecure-content'", "tests/movie/*.test.*.js"]
+  testcafe_2:
+    image: testcafe/testcafe
+    volumes:
+      - ./tests:/tests
+    environment:
+      - TEST_SERVER=test_server
+    command: ["-c", "2" ,"'chromium --headless --no-sandbox --disable-extensions --allow-insecure-localhost --allow-running-insecure-content'", "tests/movie/*.test.*.js"]
+
+  testcafe_3:
+    image: testcafe/testcafe
+    volumes:
+      - ./tests:/tests
+    environment:
+      - TEST_SERVER=test_server
+    command: ["-c", "2" ,"'chromium --headless --no-sandbox --disable-extensions --allow-insecure-localhost --allow-running-insecure-content'", "tests/movie/*.test.*.js"]
+
+  testcafe_4:
+    image: testcafe/testcafe
+    volumes:
+      - ./tests:/tests
+    environment:
+      - TEST_SERVER=test_server
+    command: ["-c", "2" ,"'chromium --headless --no-sandbox --disable-extensions --allow-insecure-localhost --allow-running-insecure-content'", "tests/movie/*.test.*.js"]
+
+  testcafe_5:
+    image: testcafe/testcafe
+    volumes:
+      - ./tests:/tests
+    environment:
+      - TEST_SERVER=test_server
+    command: ["-c", "2" ,"'chromium --headless --no-sandbox --disable-extensions --allow-insecure-localhost --allow-running-insecure-content'", "tests/movie/*.test.*.js"]
